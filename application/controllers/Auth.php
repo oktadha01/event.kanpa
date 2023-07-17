@@ -22,7 +22,7 @@ class Auth extends CI_Controller
 		if ($session == '') {
 			$this->load->view('page/login');
 		} else {
-			redirect('Setting_event');
+			redirect('Dashboard');
 		}
 	}
 
@@ -46,7 +46,7 @@ class Auth extends CI_Controller
 					'status' => "Loged in"
 				];
 				$this->session->set_userdata($session);
-				redirect('Setting_event');
+				redirect('Dashboard');
 			}
 		} else {
 			$this->session->set_flashdata('result_login', '<br>email Dan Password Harus Diisi.');

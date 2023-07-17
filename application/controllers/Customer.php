@@ -18,8 +18,8 @@ class Customer extends CI_Controller
         // $nm_perum = $this->uri->segment(3);
         $nm_perum = preg_replace("![^a-z0-9]+!i", " ", $this->uri->segment(3));
 
-        $data['bread']          = 'Customer Event ' . $nm_perum;
-        $data['tittle']          = 'Customer Event ' . $nm_perum;
+        $data['bread']          = 'Event ' . $nm_perum;
+        $data['tittle']          = 'Event ' . $nm_perum;
         $data['data_customer'] = $this->M_customer->m_data_customer($nm_perum);
         // $data['script']        = 'page/customer/setting_event_js';
         $data['content']        = 'page/customer/customer';
