@@ -39,8 +39,8 @@
                     </div>
                     <div class="slide__content slide__content__left slide-cus">
                         <div class="slide__content--headings text-left">
-                            <h2 class="animated title fontsize-text-header" data-animation-in="fadeInRight">SELAMAT DATANG</h2>
-                            <h2 class="animated title fontsize-text-header" data-animation-in="fadeInRight">GRIYA KANZU CARUBAN</h2>
+                            <h5 class="animated title fontsize-text-header" data-animation-in="fadeInRight">SELAMAT DATANG DI</h5>
+                            <h5 class="animated title fontsize-text-header" data-animation-in="fadeInRight">GRIYA KANZU CARUBAN</h5>
                             <p class="animated top-title p-header-sub" data-animation-in="fadeInRight" data-delay-in="0.2">Rumah Subsidi Rasa Komersil</p>
                         </div>
                     </div>
