@@ -10,6 +10,6 @@
 </style>
 <div class="container-fluid py-4">
     <center>
-        <img src="<?= base_url('upload'); ?>/Logo.JPG" class="img-fluid logo">
+        <img src="<?= base_url('upload'); ?>/Logo.jpg" class="img-fluid logo">
     </center>
 </div>

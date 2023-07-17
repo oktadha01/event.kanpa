@@ -9,6 +9,8 @@
     <title>
         <?= $tittle; ?>
     </title>
+    <meta property="og:image" content="<?= base_url(); ?>assets_adm/img/logo/logo1.png">
+    <meta name="description" content="Event Griya Kanzu Caruban">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <link href="<?= base_url(); ?>assets_adm/css/nucleo-icons.css" rel="stylesheet" />
