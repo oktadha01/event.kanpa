@@ -69,6 +69,7 @@
                 <div class="row ">
                     <center>
                         <div class="header">
+                            TEEESSS
                             <h2 id="text-regist">Silahkan isi data diri anda</h2>
                         </div>
                         <p class="p-regist">Event Griya Kanzu Caruban 18 Juli 2023 - 27 Juli 2023</p>
