@@ -69,7 +69,6 @@
                 <div class="row ">
                     <center>
                         <div class="header">
-                            TEEESSS
                             <h2 id="text-regist">Silahkan isi data diri anda</h2>
                         </div>
                         <p class="p-regist">Event Griya Kanzu Caruban 18 Juli 2023 - 27 Juli 2023</p>
@@ -105,13 +104,14 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script type="text/javascript" src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
 <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
-<script type="text/javascript" src="http://tympanus.net/Development/Arctext/js/jquery.arctext.js"></script>
+<!-- <script type="text/javascript" src="http://tympanus.net/Development/Arctext/js/jquery.arctext.js"></script> -->
+<script type="text/javascript" src="<?= base_url('assets');?>/js/arctext.js"></script>
 </head>
 
 <script>
     $('#text-radius').arctext({
         radius: 600
-    })
+    });
     $('#btn-submit').click(function(e) {
         if ($('#nama').val() == '' || $('#no-hp').val() == '' || $('#alamat').val() == '') {
             if ($('#nama').val() == '') {
