@@ -1,7 +1,15 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<style>
+    .logo {
 
+        height: 16rem;
+        top: 5rem;
+        position: relative;
+        border-radius: 130px;
+        box-shadow: 0px 0px 25px rgb(0 0 0 / 34%)
+    }
+</style>
 <div class="container-fluid py-4">
     <center>
-        <img src="<?= base_url('upload'); ?>/logo_ptkanpa.png" class="img-fluid" data-animation-in="fadeInRight" data-delay-in="0.3" style="height: 16rem;top: 5rem;position: relative;">
+        <img src="<?= base_url('upload'); ?>/Logo.png" class="img-fluid logo">
     </center>
 </div>
