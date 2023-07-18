@@ -181,10 +181,10 @@
                     icon: 'success',
                     confirmButtonText: 'Ok'
                 })
-                $('#btn-submit').removeClass('bg-gradient-info').addClass('bg-gradient-success').text('Success').attr('disabled', true);
-                $('#nama, #no-hp, #alamat').attr('readonly', true).addClass('border-in-success');
-                $('.label-in').addClass('color-success');
-                $('#text-regist').text('Registrasi anda berhasil disimpan')
+                // $('#btn-submit').removeClass('bg-gradient-info').addClass('bg-gradient-success').text('Success').attr('disabled', true);
+                $('#nama, #no-hp, #alamat').val('');
+                // $('.label-in').addClass('color-success');
+                // $('#text-regist').text('Registrasi anda berhasil disimpan')
             }
         }).then((result) => {
             /* Read more about handling dismissals below */

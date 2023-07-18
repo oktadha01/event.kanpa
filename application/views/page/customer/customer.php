@@ -18,6 +18,7 @@
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NAMA</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NO HP</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ALAMAT</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -39,6 +40,9 @@
                             </td>
                             <td class="align-middle text-center text-sm">
                                 <p class="text-xs font-weight-bold mb-0"><?= $data->alamat; ?></p>
+                            </td>
+                            <td class="align-middle text-center text-sm">
+                                <p class="text-xs font-weight-bold mb-0"><?= $data->tgl_event; ?></p>
                             </td>
                         </tr>
                     <?php

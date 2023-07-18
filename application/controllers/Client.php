@@ -52,6 +52,7 @@ class Client extends CI_Controller
             'nama' => $nama,
             'no_hp' => $no_hp,
             'alamat' => $alamat,
+            'tgl_event'=> date("d-m-Y"),
         );
         $this->M_client->m_save_customer($data);
     }
