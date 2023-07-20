@@ -25,19 +25,14 @@
 <!-- date range picker JS -->
 <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- datatables js -->
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="<?php echo base_url('assets/js/datatables.min.js') ?>"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 <script type="text/javascript">
-    $(function() {
-        // $('input[name="daterange"]').daterangepicker({
-        //     opens: 'left'
-        // }, function(start, end, label) {
-        //     console.log("A date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format(
-        //         'YYYY-MM-DD'));
-        //     alert(start);
-        // });
-    });
 </script>
 
 </body>

@@ -1,18 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-<style>
-    .border-in-success {
-        border-color: #2b96f1;
-    }
-
-    .border-in-error {
-        border-color: red;
-    }
-
-    .color-success {
-        color: #2b96f1;
-    }
-</style>
 
 <main class="main-content  mt-0">
     <div class="container">
@@ -87,12 +74,12 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 mt-3 p-0">
-
                         <div class="input-wrapper">
                             <input type="text" id="alamat" required>
                             <label class="label-in" for="alamat">Alamat</label>
                         </div>
                     </div>
+
                     <div class="col-lg-2 col-12 mt-3">
                         <button type="button" id="btn-submit" class="col-12 btn mb-0  bg-gradient-info" style="height: 46px;">Submit</button>
                     </div>
@@ -105,13 +92,15 @@
 <script type="text/javascript" src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
 <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
 <!-- <script type="text/javascript" src="http://tympanus.net/Development/Arctext/js/jquery.arctext.js"></script> -->
-<script type="text/javascript" src="<?= base_url('assets');?>/js/arctext.js"></script>
+<script type="text/javascript" src="<?= base_url('assets'); ?>/js/arctext.js"></script>
+
 </head>
 
 <script>
     $('#text-radius').arctext({
         radius: 600
     });
+    
     $('#btn-submit').click(function(e) {
         if ($('#nama').val() == '' || $('#no-hp').val() == '' || $('#alamat').val() == '') {
             if ($('#nama').val() == '') {

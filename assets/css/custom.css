@@ -6,6 +6,18 @@ body {
 	font-size: 1.6rem;
 	font-family: "Poppins", sans-serif;
 } */
+.border-in-success {
+	border-color: #2b96f1;
+}
+
+.border-in-error {
+	border-color: red;
+}
+
+.color-success {
+	color: #2b96f1;
+}
+
 .float-right {
 	float: right;
 }
@@ -47,20 +59,21 @@ body {
 	}
 
 	.p-header-sub {
-		font-size: medium !important; 
+		font-size: medium !important;
 	}
 }
 
 /* @media all and (orientation: portrait) { */
-	
-	@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-		.fontsize-text-header {
-			font-size: 34px !important;
-			font-weight: bold;
-		}
-		.p-header-sub {
-			font-size: x-large !important; 
-		}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	.fontsize-text-header {
+		font-size: 34px !important;
+		font-weight: bold;
+	}
+
+	.p-header-sub {
+		font-size: x-large !important;
+	}
 }
 
 @media (min-width: 992px) {
