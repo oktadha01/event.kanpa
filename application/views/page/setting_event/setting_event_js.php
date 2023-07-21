@@ -10,6 +10,7 @@
     $('#btn-cencel-add-admin').click(function() {
         close_admin();
     });
+    
     $('#btn-seve-admin').click(function() {
         let formData = new FormData();
         formData.append('nama', $('#nama').val());

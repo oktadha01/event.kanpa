@@ -9,6 +9,7 @@
                 $nm_perum = preg_replace("![^a-z0-9]+!i", " ", $this->uri->segment(3));
                 ?>
                 <input type="text" id="nm-perum" value="<?= $nm_perum; ?>" hidden>
+                <input type="text" id="id-customer" value="" hidden>
                 <div class="col-lg-3 col-12">
                     <div class="input-group">
                         <span class="input-group-text text-body"><i class="fa fa-calendar" aria-hidden="true"></i></span>
@@ -41,7 +42,7 @@
                     <button type="button" id="btn-close-cust" class="btn mb-0  bg-gradient-danger btn-sm">Close</button>
                 </div>
                 <div class="col-6">
-                    <button type="button" id="btn-save-cust" class="btn mb-0  bg-gradient-success float-right btn-sm">Save Customer</button>
+                    <button type="button" id="btn-save-cust" class="btn mb-0  bg-gradient-success float-right btn-sm" value="save">Save Customer</button>
                 </div>
             </div>
         </div>
@@ -92,13 +93,17 @@
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NO HP</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ALAMAT</th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ation</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
                 <tbody id="load-data-cust">
-
+                   
                 </tbody>
             </table>
+        </div>
+        <div class="card-footer">
+            <h6 id="count-data"></h6>
         </div>
     </div>
 </div>

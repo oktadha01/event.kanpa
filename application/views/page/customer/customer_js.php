@@ -1,4 +1,5 @@
 <script>
+    load_data_cust();
     $(document).ready(function() {
         $('#form-add-cust').removeAttr('hidden', true).hide();
         $('#btn-add-cust').click(function(e) {
@@ -11,7 +12,7 @@
             // alert('ya')
             load_data_cust();
         })
-        load_data_cust();
+
     });
     $('#btn-save-cust').click(function(e) {
         if ($('#nama').val() == '' || $('#no-hp').val() == '' || $('#alamat').val() == '') {
@@ -38,10 +39,12 @@
             // alert('yaa')
             let formData = new FormData();
             formData.append('nm-perum', $('#nm-perum').val());
-            formData.append('tgl-event', $('#tgl-input').val());
+            formData.append('id-customer', $('#id-customer').val());
             formData.append('nama', $('#nama').val());
             formData.append('no-hp', $('#no-hp').val());
             formData.append('alamat', $('#alamat').val());
+            formData.append('tgl-event', $('#tgl-input').val());
+            formData.append('action', $('#btn-save-cust').val());
             $.ajax({
                 type: 'POST',
                 url: "<?php echo site_url('Customer/save_customer'); ?>",
@@ -107,6 +110,8 @@
     function form_close() {
         $('#form-add-cust').hide();
         $('#btn-add-cust').show();
-        $('#nama, #no-hp, #alamat').val('')
+        $('#nama, #no-hp, #alamat').val('');
+        $("#btn-save-cust").val("save");
+
     }
 </script>

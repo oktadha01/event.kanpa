@@ -36,10 +36,12 @@ class Customer extends CI_Controller
                 $id_perum = $row->id_perum;
             }
         }
-        $tgl_event = $this->input->post('tgl-event');
+        $action = $this->input->post('action');
+        $id_customer = $this->input->post('id-customer');
         $nama = $this->input->post('nama');
         $no_hp = $this->input->post('no-hp');
         $alamat = $this->input->post('alamat');
+        $tgl_event = $this->input->post('tgl-event');
         $data = array(
             'id_cus_perum' => $id_perum,
             'nama' => $nama,
@@ -47,7 +49,18 @@ class Customer extends CI_Controller
             'alamat' => $alamat,
             'tgl_event' => $tgl_event,
         );
-        $this->M_customer->m_save_customer($data);
+        if ($action == 'save') {
+
+            $this->M_customer->m_save_customer($data);
+        } else if ($action == 'edit') {
+
+            $this->M_customer->m_edit_customer($id_customer, $tgl_event, $nama, $no_hp, $alamat, $data);
+        }
+    }
+    function delete_customer()
+    {
+        $id_customer = $this->input->post('id-customer');
+        $this->M_customer->m_delete_customer($id_customer);
     }
     function data_filter()
     {
@@ -55,101 +68,109 @@ class Customer extends CI_Controller
         $tgl_filter = $this->input->post('tgl-filter');
         $no = 1;
         // echo $nm_perum;
-        $sql = "SELECT *FROM perumahan, customer WHERE perumahan.id_perum = customer.id_cus_perum AND perumahan.nm_perum = '$nm_perum' ORDER BY tgl_event DESC, id_customer DESC";
-        $query = $this->db->query($sql);
-        if ($query->num_rows() > 0) {
-            foreach ($query->result() as $row) {
-                if ($tgl_filter == 'all') {
+        if ($tgl_filter == 'all') {
+            $sql = "SELECT *FROM perumahan, customer WHERE perumahan.id_perum = customer.id_cus_perum AND perumahan.nm_perum = '$nm_perum' ORDER BY tgl_event DESC, id_customer DESC";
+            $query = $this->db->query($sql);
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
                     echo '<tr>';
                     echo '<td class="pl-23px">';
-                    echo '    <p class="text-xs font-weight-bold mb-0">' . $no++ . '</p>';
+                    echo '  <p class="text-xs font-weight-bold mb-0">' . $no++ . '</p>';
                     echo '</td>';
                     echo '<td>';
-                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->nama . '</p>';
+                    echo '  <p class="text-xs font-weight-bold mb-0">' . $row->nama . '</p>';
                     echo '</td>';
                     echo '<td>';
-                    echo '    <p class="text-xs text-secondary mb-0">' . $row->no_hp . '</p>';
+                    echo '  <p class="text-xs text-secondary mb-0">' . $row->no_hp . '</p>';
                     echo '</td>';
                     echo '<td class="align-middle text-center text-sm">';
-                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->alamat . '</p>';
+                    echo '  <p class="text-xs font-weight-bold mb-0">' . $row->alamat . '</p>';
                     echo '</td>';
                     echo '<td class="align-middle text-center text-sm">';
-                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->tgl_event . '</p>';
+                    echo '  <p class="text-xs font-weight-bold mb-0">' . $row->tgl_event . '</p>';
                     echo '</td>';
-                    echo '</tr>';
-                } else if ($tgl_filter == $row->tgl_event) {
-                    echo '<tr>';
-                    echo '<td class="pl-23px">';
-                    echo '    <p class="text-xs font-weight-bold mb-0">' . $no++ . '</p>';
-                    echo '</td>';
-                    echo '<td>';
-                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->nama . '</p>';
-                    echo '</td>';
-                    echo '<td>';
-                    echo '    <p class="text-xs text-secondary mb-0">' . $row->no_hp . '</p>';
                     echo '</td>';
                     echo '<td class="align-middle text-center text-sm">';
-                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->alamat . '</p>';
-                    echo '</td>';
-                    echo '<td class="align-middle text-center text-sm">';
-                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->tgl_event . '</p>';
+                    echo '  <a class="btn text-dark mb-0 btn-edit-customer" href="#" data-id-customer="' . $row->id_customer . '" data-nama="' . $row->nama . '" data-no-hp="' . $row->no_hp . '" data-alamat="' . $row->alamat . '" data-tgl-event="' . $row->tgl_event . '" style="padding: 1px 7px;"><i class="fas fa-pencil-alt text-dark" aria-hidden="true"></i></a> ';
+                    echo '  <a class="btn  text-danger text-gradient mb-0 btn-delete-cust"  href="#" data-id-customer="' . $row->id_customer . '" style="padding: 1px 7px;"><i class="far fa-trash-alt " aria-hidden="true"></i></a>';
                     echo '</td>';
                     echo '</tr>';
                 }
             }
-
-            // $sql = "SELECT *FROM perumahan, customer WHERE perumahan.id_perum = customer.id_cus_perum AND customer.tgl_event='$tgl_filter' perumahan.nm_perum = '$nm_perum'";
-            // $query = $this->db->query($sql);
-            // if ($query->num_rows() > 0) {
-            //     foreach ($query->result() as $row) {
-            //         $id_perum = $row->id_perum;
-            //         echo $id_perum;
-            //     }
-            // }
+        } else {
+            $sql = "SELECT *FROM perumahan, customer WHERE perumahan.id_perum = customer.id_cus_perum AND perumahan.nm_perum = '$nm_perum' AND customer.tgl_event ='$tgl_filter' ORDER BY tgl_event DESC, id_customer DESC";
+            $query = $this->db->query($sql);
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
+                    echo '<tr>';
+                    echo '<td class="pl-23px">';
+                    echo '    <p class="text-xs font-weight-bold mb-0">' . $no++ . '</p>';
+                    echo '</td>';
+                    echo '<td>';
+                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->nama . '</p>';
+                    echo '</td>';
+                    echo '<td>';
+                    echo '    <p class="text-xs text-secondary mb-0">' . $row->no_hp . '</p>';
+                    echo '</td>';
+                    echo '<td class="align-middle text-center text-sm">';
+                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->alamat . '</p>';
+                    echo '</td>';
+                    echo '<td class="align-middle text-center text-sm">';
+                    echo '    <p class="text-xs font-weight-bold mb-0">' . $row->tgl_event . '</p>';
+                    echo '</td>';
+                    echo '</td>';
+                    echo ' <td class="align-middle text-center text-sm">';
+                    echo '<a class="btn text-dark mb-0 btn-edit-customer" href="#" data-id-customer="' . $row->id_customer . '" data-nama="' . $row->nama . '" data-no-hp="' . $row->no_hp . '" data-alamat="' . $row->alamat . '" data-tgl-event="' . $row->tgl_event . '" style="padding: 1px 7px;"><i class="fas fa-pencil-alt text-dark" aria-hidden="true"></i></a> ';
+                    echo '<a class="btn  text-danger text-gradient mb-0 btn-delete-cust"  href="#" data-id-customer="' . $row->id_customer . '" style="padding: 1px 7px;"><i class="far fa-trash-alt " aria-hidden="true"></i></a>';
+                    echo '</td>';
+                    echo '</tr>';
+                }
+            }
         }
-        // $output = '';
-        // $tgl_filter = '';
-        // $nm_perum = $this->input->post('nm-perum');
-        // // $this->load->model('M_customer');
-        // // if ($this->input->post('tgl-filter')) {
-        // $tgl_filter = $this->input->post('tgl-filter');
-        // // }
-        // $data = $this->M_customer->filter_customer($nm_perum);
-        // // $output .= '
-        // // <div class="table-responsive">
-        // //     <table class="table align-items-center mb-0">
-        // //         <thead>
-        // //                 <tr>
-        // //                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NO</th>
-        // //                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NAMA</th>
-        // //                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NO HP</th>
-        // //                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ALAMAT</th>
-        // //                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tanggal</th>
-        // //                     <th class="text-secondary opacity-7"></th>
-        // //                 </tr>
-        // //         </thead>
-        // // ';
+        echo '<script>';
+        echo '$("#count-data").text("' . $query->num_rows() . ' data customer")';
+        echo '</script>';
 
-        // if ($data->num_rows() > 0) {
-        //     $no = 1;
-        //     foreach ($data->result() as $row) {
-        //         $output .= '
-        //     <tr>
-
-        //     <td>' . $no++ . '</td>
-        //     <td>' . $row->nama . '</td>
-        //     <td>' . $row->no_hp . '</td>
-        //     <td>' . $row->alamat . '</td>
-        //     <td>' . $row->tgl_event . '</td>
-        //     </tr>
-        //     ';
-        //     }
-        // } else {
-        //     $output .= '<tr>
-        //     <td colspan="5">No Data Found</td>
-        //     </tr>';
-        // }
-        // $output .= '</table>';
-        // echo $output;
+        echo '<script>';
+        echo '$(".btn-edit-customer").click(function() {
+                form_in();
+                $("#id-customer").val($(this).data("id-customer"));
+                $("#nama").val($(this).data("nama"));
+                $("#no-hp").val($(this).data("no-hp"));
+                $("#alamat").val($(this).data("alamat"));
+                $("#tgl-input").val($(this).data("tgl-event"));
+                $("#btn-save-cust").val("edit");
+                });
+                $(".btn-delete-cust").click(function() {
+                    var confirmalert = confirm("Apakah anda yakin untuk menghapus data customer ?");
+                        if (confirmalert == true) {
+                            var el = this;
+                            let formData = new FormData();
+                            formData.append("id-customer", $(this).data("id-customer"));
+                            $.ajax({
+                                type: "POST",
+                                url: "' . site_url("Customer/delete_customer") . '",
+                                data: formData,
+                                cache: false,
+                                processData: false,
+                                contentType: false,
+                                success: function(data) {
+                                    $(el).closest("tr").css("background", "tomato");
+                                    $(el).closest("tr").fadeOut(300, function() {
+                                        $(this).remove();
+                                    });
+                                    // alert(data)
+                                
+                                
+                                },
+                                error: function() {
+                                    alert("Data Gagal Diupload");
+                                }
+                            });
+                        }
+                });
+                
+                ';
+        echo '</script>';
     }
 }
