@@ -61,6 +61,11 @@ body {
 	.p-header-sub {
 		font-size: medium !important;
 	}
+
+	/* .jmlh-anggota,
+	.no-hp {
+		width: 10rem !important;
+	} */
 }
 
 /* @media all and (orientation: portrait) { */
@@ -104,7 +109,7 @@ body {
 @media (min-width: 992px) {
 	.slide .slide__img {
 		position: absolute;
-		top: 25%;
+		top: 55%;
 		left: 0;
 		transform: translateY(-50%);
 	}
@@ -576,7 +581,7 @@ label {
 	text-transform: uppercase;
 	position: absolute;
 	z-index: 2;
-	left: 20px;
+	left: 9px;
 	top: 14px;
 	padding: 0 2px;
 	pointer-events: none;
