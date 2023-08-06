@@ -11,8 +11,8 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	// Offline development
-	'username' => 'kina3126_event',
-	'password' => '',
+	// 'username' => 'root',
+	// 'password' => '',
 
 	// Online Production
 	'username' => 'kina3126_event',
