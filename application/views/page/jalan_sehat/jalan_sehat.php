@@ -294,7 +294,7 @@
                 '        <div class="input-wrapper">' +
                 '            <select type="text" id="kategori" name="kategori[]" class="kategori col-12" required style="padding: 10px;">' +
                 '                <option value="" hidden></option>' +
-                '                <option value="dewasa">Dewas</option>' +
+                '                <option value="dewasa">Dewasa</option>' +
                 '                <option value="anak-anak">Anak-anak</option>' +
                 '            </select>' +
                 '            <label class="label-in" for="kategori">Kategori</label>' +

@@ -23,8 +23,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- datatable css -->
-    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/custom.css') ?>">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 
     <!-- datatables js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
