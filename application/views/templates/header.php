@@ -24,11 +24,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- datatable css -->
-<<<<<<< HEAD
-=======
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
->>>>>>> 62ab68a9a5a26ea1720e4b286f21818110f6ff01
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/custom.css') ?>">
+    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/css/custom.css') ?>"> -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 
     <!-- datatables js -->
