@@ -18,22 +18,22 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-12 mt-3 p-0">
+                <div class="col-lg-3 col-12 mt-3">
+                    <label class="label-in" for="nama">Nama</label>
                     <div class="input-wrapper">
-                        <input type="text" id="nama" class="" required>
-                        <label class="label-in" for="nama">nama</label>
+                        <input type="text" id="nama" class="form-control" required>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 mt-3 p-0">
+                <div class="col-lg-3 col-12 mt-3">
+                    <label class="label-in" for="no-hp">No.Hp</label>
                     <div class="input-wrapper">
-                        <input type="number" id="no-hp" required>
-                        <label class="label-in" for="no-hp">No.Hp</label>
+                        <input type="number" id="no-hp" class="form-control" required>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 mt-3 p-0">
+                <div class="col-lg-6 col-12 mt-3">
+                    <label class="label-in" for="alamat">Alamat</label>
                     <div class="input-wrapper">
-                        <input type="text" id="alamat" required>
-                        <label class="label-in" for="alamat">Alamat</label>
+                        <input type="text" id="alamat" class="form-control" required>
                     </div>
                 </div>
             </div>

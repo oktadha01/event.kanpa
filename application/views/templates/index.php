@@ -4,3 +4,4 @@
 <?php $this->load->view($content); ?>
 <?php $this->load->view('templates/footer'); ?>
 <?php $this->load->view('templates/footer_js'); ?>
+<?php $this->load->view($script); ?>
