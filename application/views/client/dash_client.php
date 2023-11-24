@@ -112,7 +112,7 @@
                         <div class="header">
                             <h2 id="text-regist">Silahkan isi data diri anda</h2>
                         </div>
-                        <p class="p-regist">Event KPR BRI Poperty Expo 24 November 2023 - 26 November 2023</p>
+                        <p class="p-regist">Event KPR BRI Poperty Expo <br>24 November 2023 - 26 November 2023</p>
                         <hr style="background: #00000029;margin: 0;height: 2px;">
                     </center>
                     <div class="col-lg-2 col-12 mt-3 p-0">
