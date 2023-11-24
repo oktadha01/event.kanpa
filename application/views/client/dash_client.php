@@ -7,7 +7,61 @@
             <div class="slider stick-dots" style="top: 50px;">
                 <div class="slide" style="border-radius: 1rem;">
                     <div class="slide__img">
-                        <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/hari-jadi-0.jpg" class="full-image animated" data-animation-in="zoomInImage" />
+                        <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/KPRBRIKANPA.jpg" class="full-image" />
+                    </div>
+                    <div class="slide__content ">
+                        <div class="slide__content--headings text-center">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="slide" style="border-radius: 1rem;">
+                    <div class="slide__img">
+                        <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/agh.jpg" class="full-image" />
+                    </div>
+                    <div class="slide__content ">
+                        <div class="slide__content--headings text-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="border-radius: 1rem;">
+                    <div class="slide__img">
+                        <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/ath.jpg" class="full-image" />
+                    </div>
+                    <div class="slide__content ">
+                        <div class="slide__content--headings text-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="border-radius: 1rem;">
+                    <div class="slide__img">
+                        <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/bp1.jpg" class="full-image" />
+                    </div>
+                    <div class="slide__content ">
+                        <div class="slide__content--headings text-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="border-radius: 1rem;">
+                    <div class="slide__img">
+                        <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/bp2.jpg" class="full-image" />
+                    </div>
+                    <div class="slide__content ">
+                        <div class="slide__content--headings text-center">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="border-radius: 1rem;">
+                    <div class="slide__img">
+                        <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/taman-kautsar.jpg" class="full-image" />
+                    </div>
+                    <div class="slide__content ">
+                        <div class="slide__content--headings text-center">
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="slide" style="border-radius: 1rem;">
+                    <div class="slide__img">
+                        <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/KPRBRIKANPA.jpg" class="full-image" />
                     </div>
                     <div class="slide__content ">
                         <div class="slide__content--headings text-center">
@@ -19,8 +73,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="slide">
+                </div> -->
+                <!-- <div class="slide">
                     <div class="slide__img ">
                         <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/header-jatim-000.jpg" class="full-image animated" data-animation-in="zoomInImage" />
                     </div>
@@ -31,7 +85,7 @@
                             <p class="animated top-title p-header-sub" data-animation-in="fadeInRight" data-delay-in="0.2">Rumah Subsidi Rasa Komersil</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- <div class="slide">
                     <div class="slide__img">
                         <img src="" alt="" data-lazy="https://images.unsplash.com/photo-1550461716-dbf266b2a8a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" class="full-image animated" data-animation-in="zoomOutImage" />
@@ -58,7 +112,7 @@
                         <div class="header">
                             <h2 id="text-regist">Silahkan isi data diri anda</h2>
                         </div>
-                        <p class="p-regist">Event Griya Kanzu Caruban 18 Juli 2023 - 27 Juli 2023</p>
+                        <p class="p-regist">Event KPR BRI Poperty Expo 24 November 2023 - 26 November 2023</p>
                         <hr style="background: #00000029;margin: 0;height: 2px;">
                     </center>
                     <div class="col-lg-2 col-12 mt-3 p-0">
@@ -100,7 +154,7 @@
     $('#text-radius').arctext({
         radius: 600
     });
-    
+
     $('#btn-submit').click(function(e) {
         if ($('#nama').val() == '' || $('#no-hp').val() == '' || $('#alamat').val() == '') {
             if ($('#nama').val() == '') {
@@ -166,7 +220,7 @@
                 clearInterval(timerInterval)
                 Swal.fire({
                     title: 'Succes!',
-                    text: 'Terimakasih anda telah berkunjung di booth kami Griya Kanzu Caruban',
+                    text: 'Terimakasih anda telah berkunjung di booth kami',
                     icon: 'success',
                     confirmButtonText: 'Ok'
                 })
