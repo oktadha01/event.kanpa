@@ -14,7 +14,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="slide" style="border-radius: 1rem;">
+                <div class="slide" style="border-radius: 1rem;">
                     <div class="slide__img">
                         <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/agh.jpg" class="full-image" />
                     </div>
@@ -58,7 +58,7 @@
                         <div class="slide__content--headings text-center">
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- <div class="slide" style="border-radius: 1rem;">
                     <div class="slide__img">
                         <img src="" alt="" data-lazy="<?= base_url('upload'); ?>/KPRBRIKANPA.jpg" class="full-image" />
