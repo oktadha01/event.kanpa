@@ -10,7 +10,7 @@
         <?php echo $_tittle; ?>
     </title>
     <meta property="og:image" content="<?= base_url(); ?>assets_adm/img/logo/logo1.png">
-    <meta name="description" content="Jalan sehat kanzu group - Dalam rangka memeriahkan HUT RI KE-78">
+    <meta name="description" content="PT KANPA - Event KPR BRI Poperty Expo">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <link href="<?= base_url(); ?>assets_adm/css/nucleo-icons.css" rel="stylesheet" />
     <link href="<?= base_url(); ?>assets_adm/css/nucleo-svg.css" rel="stylesheet" />
