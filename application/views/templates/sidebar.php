@@ -47,7 +47,7 @@
                 $role_admin = $this->session->userdata('userdata')->role;
                 if ($role_admin == "Admin") { ?>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a <?= $this->uri->segment(1) == 'Setting_event' || $this->uri->segment(1) == '' ? 'class="nav-link active"' : '' ?>
                         class="nav-link" href="<?php echo site_url('Setting_event'); ?> ">
                         <div
@@ -74,7 +74,7 @@
                         </div>
                         <span class="nav-link-text ms-1">Setting Event</span>
                     </a>
-                </li>
+                </li> -->
                 <?php
                 } else {
                 }
@@ -96,7 +96,7 @@
 
                 ?>
                 <li class="nav-item">
-                    <a <?= $this->uri->segment(3) == $nm_perum || $this->uri->segment(3) == '' ? 'class="nav-link active"' : '' ?>
+                    <a <?= $this->uri->segment(3) == $nm_perum || $this->uri->segment(1) == '' ? 'class="nav-link active"' : '' ?>
                         class="nav-link" href="<?php echo site_url('Customer'); ?>/event/<?= $nm_perum; ?>">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
